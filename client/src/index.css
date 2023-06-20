@@ -1,0 +1,22 @@
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.content{
+  height: 80vh;
+
+}
+
+/* .navbar{
+  background-color: blue !important;
+} */
+
+.register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
