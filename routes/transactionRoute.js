@@ -1,5 +1,5 @@
 import express from 'express'
-import { getAllTransection,addTransection } from '../controllers/transactionController';
+import { getAllTransection,addTransection } from '../controllers/transactionController.js';
 
 
 //router object
@@ -12,5 +12,5 @@ router.post("/add-transection", addTransection);
 //get transections
 router.post("/get-transection", getAllTransection);
 
-module.exports = router;
+export default router
 

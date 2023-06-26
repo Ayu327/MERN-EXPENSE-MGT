@@ -5,3 +5,22 @@
     padding: 15px 20px;
     box-shadow: 0 0 9px grey;
 }
+
+/*antd icons*/
+.switch-icons{
+    border: 1px solid black ;
+    border-radius: 5px;
+}
+
+.anticon svg{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.active-icon{
+    color: black;
+}
+
+.inactive-icon{
+    color:gray ;
+}

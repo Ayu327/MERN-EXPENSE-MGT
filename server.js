@@ -5,6 +5,7 @@ import morgan from 'morgan';
 //npm i colors
 import cors from 'cors'
 import userRoutes from './routes/userRoute.js'
+import transactionRoute from './routes/transactionRoute.js'
 
 
 import dotenv from 'dotenv'
@@ -35,6 +36,7 @@ app.use(cors())
 //     res.send("<h1>Hello from server</h1>")
 // })
 app.use('/api/v1/users',userRoutes)
+app.use('/api/v1/transections',transactionRoute)
 
 //port
 const PORT = 8080 || process.env.PORT

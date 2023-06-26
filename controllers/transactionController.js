@@ -1,5 +1,6 @@
-import transectionModel from "../models/transactionmodel";
-import moment from 'moment'
+import transectionModel from "../models/transactionmodel.js";
+import moment from "moment";
+
 export const getAllTransection = async (req, res) => {
   try {
     const { frequency, selectedDate, type } = req.body;
@@ -22,7 +23,7 @@ export const getAllTransection = async (req, res) => {
     res.status(200).json(transections);
   } catch (error) {
     console.log(error);
-    res.status(500).json(erorr);
+    res.status(500).json(error);
   }
 };
 
@@ -37,4 +38,3 @@ export const addTransection = async (req, res) => {
     res.status(500).json(error);
   }
 };
-
