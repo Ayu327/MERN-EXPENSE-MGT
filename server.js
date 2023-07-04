@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import cors from 'cors'
 import userRoutes from './routes/userRoute.js'
 import transactionRoute from './routes/transactionRoute.js'
+import path from 'path'
 
 
 import dotenv from 'dotenv'
@@ -37,6 +38,13 @@ app.use(cors())
 // })
 app.use('/api/v1/users',userRoutes)
 app.use('/api/v1/transections',transactionRoute)
+
+//static files
+app.use(express.static(path.join(__dirname,'./client/build')))
+
+app.get('*',function(req,res){
+    res.sendFile(path.join(__dirname,"./client/build/index.html"))
+})
 
 //port
 const PORT = 8080 || process.env.PORT
